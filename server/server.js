@@ -1,4 +1,6 @@
 const express = require('express');
+const expressPlayground = require('graphql-playground-middleware-express')
+  .default;
 const models = require('./models');
 const expressGraphQL = require('express-graphql');
 const mongoose = require('mongoose');
@@ -19,6 +21,7 @@ mongoose.connection
   .once('open', () => console.log('Connected to MongoDB instance.'))
   .on('error', error => console.log('Error connecting to MongoLab:', error));
 
+app.get('/playground', expressPlayground({ endpoint: '/graphql' }));
 app.use(bodyParser.json());
 app.use(
   '/graphql',

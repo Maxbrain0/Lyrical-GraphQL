@@ -26,6 +26,7 @@
     "express-graphql": "^0.6.1",
     "express-session": "^1.15.0",
     "graphql": "^0.8.2",
+    "graphql-playground-middleware-express": "^1.7.12",
     "html-webpack-plugin": "^2.26.0",
     "lodash": "^4.17.4",
     "mongoose": "^5.7.10",
